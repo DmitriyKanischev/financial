@@ -1,9 +1,12 @@
-import "./App.css";
-import MainChart from "./components/MainChart";
+import './App.css';
+import MainChart from './components/MainChart';
+import { StoreProvider } from './store/StoreProvider';
 
 function App() {
   return (
-    <MainChart />
+    <StoreProvider>
+      <MainChart />
+    </StoreProvider>
   );
 }
 
