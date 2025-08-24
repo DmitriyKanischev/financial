@@ -6,7 +6,7 @@ import type {
   monthsType,
 } from "../types/index";
 
-class ExpenseStore {
+export class ExpenseStore {
   categories: categoriesType = [];
   icons: iconsType = [];
   colors: colorsType = [];
