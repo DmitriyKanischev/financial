@@ -15,7 +15,7 @@ export class ExpenseStore {
   error: string | null = null;
   isLoading = false;
 
-  selectedMonthId: number | null = null; //Current month
+  selectedMonthId: number | null = new Date().getMonth(); //Current month
 
   constructor() {
     makeAutoObservable(this);
