@@ -1,0 +1,32 @@
+.NavMonth {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: center;
+  align-self: center;
+  gap: 1em;
+  margin: 1rem 0;
+
+  &_li {
+    padding: 12px;
+    color: #202020;
+    border: 1px solid #20202038;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:
+      transform 200ms ease-in-out,
+      box-shadow 200ms ease-in-out;
+
+    &:hover {
+      color: #1677ff;
+      border: 1px solid #1677ff;
+      transform: scale(1.1);
+      box-shadow: 0 0 8px 1px rgb(22 119 255 / 15%);
+    }
+    &_active {
+      color: #1677ff;
+      border: 1px solid #1677ff;
+      box-shadow: 0 0 8px 1px rgb(22 119 255 / 15%);
+    }
+  }
+}
