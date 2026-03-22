@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('../src/asserts/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url('../src/asserts/fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
+}
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Open Sans Regular', 'Arial', 'Helvetica', sans-serif;
+  font-weight: normal;
+}

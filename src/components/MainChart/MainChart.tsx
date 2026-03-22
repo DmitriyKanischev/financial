@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { observer } from 'mobx-react-lite';
-import { useStore } from '../hooks/useStore';
+import { useStore } from '../../hooks/useStore';
 import { Doughnut } from 'react-chartjs-2';
 
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
@@ -15,7 +15,7 @@ const MainChart: React.FC = observer(() => {
   const isLoading = expenseStore.isLoading;
   console.log(currentMonth);
   useEffect(() => {
-    if (isLoading) return; //Wait fetch data
+    if (isLoading) return;
 
     const selectedMonth = expenseStore.months.find((month) => month.id === currentMonth);
 
@@ -45,14 +45,15 @@ const MainChart: React.FC = observer(() => {
     cutout: '50%',
     plugins: {
       legend: {
-        display: false,
+        display: true,
+        position: 'right',
       },
     },
   };
   return isLoading ? (
     <div>Loading...</div>
   ) : (
-    <div style={{ width: '400px', height: '400px' }}>
+    <div style={{ width: '600px', height: '400px' }}>
       <Doughnut data={data} options={options} />
     </div>
   );
